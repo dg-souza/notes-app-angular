@@ -1,0 +1,11 @@
+<div class="content">
+    <span>{{ this.todo }}</span>
+
+    <div class="divisor"></div>
+
+    <div class="content__button">
+        <img src="../../../assets/edit-icon.png" (click)="this.editTask.emit()" alt="Edit-Icon" />
+
+        <img src="../../../assets/delete-icon.png" alt="Delete-Icon" (click)="this.deleteTask.emit()">
+    </div>
+</div>

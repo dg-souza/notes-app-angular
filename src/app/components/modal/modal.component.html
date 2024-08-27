@@ -1,0 +1,17 @@
+<div [style.display]="isVisible ? 'flex' : 'none'" class="modal">
+    <div class="modal__content">
+        <div class="modal__content__header">
+            <h3>New Task</h3>
+        </div>
+
+        <div class="modal__content__body">
+            <input [ngModel]="this.taskName" (ngModelChange)="this.taskName = $event" type="text" placeholder="Text name's todo here"/>
+        </div>
+
+        <div class="modal__content__footer">
+            <span (click)="this.isVisible = !this.isVisible">Close</span>
+
+            <span (click)="this.save()">Save</span>
+        </div>
+    </div>
+</div>

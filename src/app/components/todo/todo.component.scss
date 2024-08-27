@@ -1,0 +1,27 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+
+    margin: 20px 0;
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 20px;
+
+        img {
+            width: 20px;
+            transition: 0.2s;
+
+            opacity: 0.4;
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.2;
+            }
+        }
+    }
+}

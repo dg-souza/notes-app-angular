@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Todo List</h1>
+
+    <div class="input-form">
+        <input type="text" [ngModel]="todoText" (ngModelChange)="this.searchTask($event)"
+            placeholder="Search for task here" />
+    </div>
+
+    <div class="todo-list">
+        @for (item of todoArray; track $index) {
+        <app-todo (deleteTask)="deleteTask($index)" (editTask)="editTask(item, $index)" [todo]="item" />
+
+        <div class="divisor"></div>
+        }
+    </div>
+
+    <app-modal (addNewTask)="saveTask($event)" />
+
+    <img (click)="this.childModal.isVisible = !this.childModal.isVisible" src="../../../assets/add-icon.svg"
+        alt="Add-Icon">
+</div>
